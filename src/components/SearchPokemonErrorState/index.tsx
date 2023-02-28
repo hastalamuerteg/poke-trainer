@@ -9,8 +9,8 @@ export const SearchPokemonErrorState = () => {
         alt="image do pokemon Psyduck triste com as patas na cabeça em sinal de preocupação."
       />
       <S.EmptyStateMessage>
-        Não encontramos o Pokemon solicitado. <br />
-        Tente novamente
+        We could not find the requested pokemon. <br />
+        Try again.
       </S.EmptyStateMessage>
     </S.Container>
   )

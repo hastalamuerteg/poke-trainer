@@ -32,7 +32,12 @@ export const SearchBar = ({ onSearch, onResetList }: ISearchBarProps) => {
         placeholder="Search for Pokemon"
         required
       />
-      <S.SearchButton onClick={handleSearch}>
+      <S.SearchButton
+        onClick={handleSearch}
+        id="Search Pokemon"
+        title="Search Pokemon"
+        aria-label="Search Pokemon"
+      >
         <SearchIcon />
       </S.SearchButton>
     </S.Container>
