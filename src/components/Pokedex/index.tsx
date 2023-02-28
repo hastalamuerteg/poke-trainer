@@ -38,7 +38,7 @@ export const Pokedex = () => {
   useEffect(() => {
     if (!pokemonsInPokedex.length) setStateMachine('empty')
     else setStateMachine('list')
-  }, [pokemonsInPokedex, addNewPokemonInPokedex])
+  }, [pokemonsInPokedex])
 
   useEffect(() => {
     if (addNewPokemonInPokedex) setStateMachine('add_pokemon')
@@ -47,6 +47,7 @@ export const Pokedex = () => {
   const handleAddPokemonIntoPokedex = () => {
     if (pokemonsInPokedex.length === pokedexLengthLimit) {
       setAddNewPokemonInPokedex(undefined)
+      setStateMachine('list')
       return toast.error(
         'Sua Pokedex está cheia. Você pode adicionar no máximo 6 Pokemons',
       )
@@ -57,6 +58,7 @@ export const Pokedex = () => {
       )
       if (isPokemonAlreadyInList) {
         setAddNewPokemonInPokedex(undefined)
+        setStateMachine('list')
         return toast.error(
           `${addNewPokemonInPokedex.name} já está em sua Pokedex`,
         )
@@ -67,7 +69,7 @@ export const Pokedex = () => {
 
   const stateMachineStates = {
     states: {
-      idle: '',
+      idle: null,
       empty: <PokedexEmptyState />,
       add_pokemon: (
         <S.AddNewPokemonContainer>

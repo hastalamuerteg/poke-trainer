@@ -36,7 +36,7 @@ export const PokemonCard = ({ pokemon }: IPokemonCardProps) => {
 
   const stateMachineStates = {
     states: {
-      idle: '',
+      idle: null,
       default: (
         <>
           <S.PokemonName>{pokemon.name}</S.PokemonName>
