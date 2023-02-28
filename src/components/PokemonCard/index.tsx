@@ -52,7 +52,12 @@ export const PokemonCard = ({ pokemon }: IPokemonCardProps) => {
       ),
       more_details: (
         <S.MoreDetailsContainer>
-          <S.MoreDetailsGoBackButton onClick={handleGoBackToPokeball}>
+          <S.MoreDetailsGoBackButton
+            onClick={handleGoBackToPokeball}
+            id="go back button"
+            aria-label="go back button"
+            title="Go back button"
+          >
             <GoBackIcon />
           </S.MoreDetailsGoBackButton>
           <S.MoreDetailsTitle>Stats</S.MoreDetailsTitle>

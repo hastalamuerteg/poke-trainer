@@ -14,7 +14,6 @@ export const PokemonList = () => {
   const [stateMachine, setStateMachine] = useState<StateMachine>('idle')
   const pokemonList = useAtomValue(pokemonListAtom)
   const [page, setPage] = useState(1)
-
   const { getList, getOnePokemon } = useFetchPokemonData()
 
   const fetchPokemonList = useCallback(async () => {

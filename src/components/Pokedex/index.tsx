@@ -49,7 +49,7 @@ export const Pokedex = () => {
       setAddNewPokemonInPokedex(undefined)
       setStateMachine('list')
       return toast.error(
-        'Sua Pokedex está cheia. Você pode adicionar no máximo 6 Pokemons',
+        'Your Pokedex is full. You can add a maximum of 6 Pokemons',
       )
     }
     if (addNewPokemonInPokedex) {
@@ -60,7 +60,7 @@ export const Pokedex = () => {
         setAddNewPokemonInPokedex(undefined)
         setStateMachine('list')
         return toast.error(
-          `${addNewPokemonInPokedex.name} já está em sua Pokedex`,
+          `${addNewPokemonInPokedex.name} is already in your Pokedex`,
         )
       }
       setPokemonsInPokedex([...pokemonsInPokedex, addNewPokemonInPokedex])
@@ -90,7 +90,6 @@ export const Pokedex = () => {
       ),
       list: (
         <>
-          <S.PokedexTitle>Pokemons</S.PokedexTitle>
           <S.PokedexContent>
             {pokemonsInPokedex?.map((p) => (
               <S.PokedexPokemonCard key={p.id}>

@@ -1,3 +1,15 @@
 {
-  "extends": "@rocketseat/eslint-config/react"
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "jest/globals": true
+  },
+  "extends": [
+    "@rocketseat/eslint-config/react",
+    "plugin:jest/recommended"
+  ],
+  "plugins": [
+    "react",
+    "jest"
+  ]
 }

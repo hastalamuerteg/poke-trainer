@@ -93,21 +93,11 @@ export const HeaderTripleDots = styled.div`
 `
 
 export const PokedexBody = styled.div`
-  height: 70%;
-
+  height: 60%;
   width: 90%;
   margin: 1rem auto;
   border-radius: 2rem;
-  padding: 2rem;
-`
-
-export const PokedexTitle = styled.span`
-  font-size: 2rem;
-  font-weight: 700;
-  text-transform: capitalize;
-  text-align: center;
-  display: block;
-  color: var(--white);
+  padding: 1rem;
 `
 
 export const PokedexContent = styled.span`
@@ -120,15 +110,15 @@ export const PokedexPokemonCard = styled.span`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(255, 255, 255, 0.6);
-  height: 6.5rem;
-  width: 6.5rem;
+  background: var(--white);
+  height: 6rem;
+  width: 6rem;
   margin: 1rem;
-  border-radius: 2rem;
+  border-radius: 999px;
   position: relative;
 
   img {
-    height: 6rem;
+    height: 5rem;
   }
 `
 export const PokedexDeletePokemonButton = styled.button`
