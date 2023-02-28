@@ -30,7 +30,7 @@ export const PokemonList = () => {
 
   const fetchPokemon = async (pokemon: string) => {
     setStateMachine('loading')
-    const response = await getOnePokemon(pokemon)
+    const response = await getOnePokemon(pokemon.toLowerCase().trim())
 
     if (!response?.success) {
       setStateMachine('error')
