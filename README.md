@@ -42,15 +42,15 @@ Check the live project with the link below
 
 ## How To run the project 💻💻
 
-Clone the repository
+#### Clone the repository
 - Git clone https://github.com/hastalamuerteg/poke-trainer.git
-Install the dependencies
+#### Install the dependencies
 - yarn
-env file
+#### env file
 - Create a .env.local file using the exact value from the .env.example file (VITE_BACKEND_URL='https://pokeapi.co/api/v2')
-Running the project locally
+#### Running the project locally
 - yarn dev
-Running tests
+#### Running tests
 - yarn test
 
 
